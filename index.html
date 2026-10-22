@@ -145,6 +145,7 @@ li[data-l].on{display:list-item}
 <script>
 /* Контакты: заполнить до публикации (см. funnel/ВОРОНКА.md, раздел «Нужно от Никиты»). */
 var CONTACT={telegram:"tanyoushin",viber:"+381638224429",email:"allforluma@gmail.com",whatsapp:""};
+var MOBILE=/Android|iPhone|iPad|iPod|Mobi/i.test(navigator.userAgent);
 function hrefFor(cls){
  if(cls=="tg"&&CONTACT.telegram)return "https://t.me/"+CONTACT.telegram;
  if(cls=="viber"&&CONTACT.viber)return "viber://chat?number="+encodeURIComponent(CONTACT.viber);
@@ -156,6 +157,21 @@ document.querySelectorAll(".cta a").forEach(function(a){
  var c=["tg","viber","mail","wa"].filter(function(x){return a.classList.contains(x)})[0];
  var h=hrefFor(c);
  if(h){a.href=h}else{a.style.display="none"}
+ if(!h||MOBILE)return;
+ if(c=="mail"){
+  a.href="https://mail.google.com/mail/?view=cm&to="+encodeURIComponent(CONTACT.email)+"&su=Photo";
+  a.target="_blank";a.rel="noopener";
+ }
+ if(c=="viber"){
+  a.href="#";
+  a.onclick=function(e){
+   e.preventDefault();
+   var n=CONTACT.viber,box=a.parentNode.querySelector(".note");
+   if(!box){box=document.createElement("p");box.className="note";a.parentNode.appendChild(box)}
+   box.textContent="Broj je kopiran: "+n+". Otvorite Viber i nalepite ga u pretragu.";
+   try{navigator.clipboard.writeText(n)}catch(x){}
+  };
+ }
 });
 function setLang(l){
  document.documentElement.lang=l;
