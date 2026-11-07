@@ -1,177 +1,276 @@
 <!doctype html>
-<html lang="ru">
+<html lang="sr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Old photo restoration · Реставрация старых фото · Restauracija starih fotografija</title>
-<meta name="description" content="Free preview first. Pay only if you recognize the person. Бесплатный предпросмотр. Besplatan pregled.">
+<title>Stare fotografije · Nikita, Bač · Restauracija starih porodičnih fotografija</title>
+<meta name="description" content="Obnavljam stare porodične fotografije: pukotine, pregibi, fleke, izbledela boja. Besplatan pregled sa vodenim žigom u roku od 24 sata. Plaćate samo ako prepoznate osobu.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Old photo restoration · Реставрация старых фото · Restauracija starih fotografija">
-<meta property="og:description" content="Free preview first. Pay only if you recognize the person. Бесплатный предпросмотр, платите, только если узнали человека. Besplatan pregled.">
-<meta name="theme-color" content="#faf6ef">
+<meta property="og:title" content="Stare fotografije · Nikita, Bač">
+<meta property="og:description" content="Besplatan pregled sa vodenim žigom u roku od 24 sata. Plaćate samo ako prepoznate osobu. Viber +381 63 8224429">
+<meta name="theme-color" content="#f6f0e6">
 <style>
-:root{--bg:#faf6ef;--ink:#2b2622;--mute:#6f655c;--acc:#8a5a2b;--line:#e4d9c9}
+:root{--bg:#f6f0e6;--paper:#fffdf9;--ink:#2a2420;--mute:#6b6058;--acc:#7a4b22;--line:#e3d7c5;--ok:#3f6b3a;--no:#9a3b2f;--vb:#7360f2;--vb2:#5e4bd8}
 *{box-sizing:border-box}
-body{margin:0;font:18px/1.55 Georgia,"Times New Roman",serif;color:var(--ink);background:var(--bg)}
-main{max-width:720px;margin:0 auto;padding:24px 20px 64px}
-.lang{display:flex;gap:8px;justify-content:flex-end;margin-bottom:12px}
-.lang button{font:600 14px system-ui,sans-serif;border:1px solid var(--line);background:#fff;padding:6px 12px;border-radius:999px;cursor:pointer;color:var(--ink)}
+html{scroll-behavior:smooth}
+body{margin:0;font:18px/1.6 Georgia,"Times New Roman",serif;font-variant-numeric:lining-nums;color:var(--ink);background:var(--bg);padding-bottom:84px}
+main{max-width:760px;margin:0 auto;padding:16px 20px 40px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:6px 0 4px}
+.brand{font:700 15px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.02em;color:var(--acc)}
+.lang{display:flex;gap:6px}
+.lang button{font:600 14px system-ui,-apple-system,"Segoe UI",sans-serif;border:1px solid var(--line);background:var(--paper);padding:7px 14px;border-radius:999px;cursor:pointer;color:var(--ink);min-height:36px}
 .lang button[aria-pressed=true]{background:var(--acc);color:#fff;border-color:var(--acc)}
-h1{font-size:34px;line-height:1.2;margin:28px 0 12px}
-h2{font-size:22px;margin:40px 0 10px}
-p{margin:0 0 12px}.lead{font-size:20px;color:var(--mute)}
-ol,ul{padding-left:22px}li{margin-bottom:8px}
-.cta{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
-.cta a{font:600 16px system-ui,sans-serif;text-decoration:none;background:var(--acc);color:#fff;padding:13px 20px;border-radius:10px}
-.cta a.alt{background:#fff;color:var(--acc);border:1px solid var(--acc)}
-.box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0}
-small,.note{color:var(--mute);font-size:15px}
-details{border-bottom:1px solid var(--line);padding:10px 0}summary{cursor:pointer;font-weight:700}
+h1{font-size:clamp(32px,6.4vw,52px);line-height:1.12;margin:30px 0 16px;letter-spacing:-.01em}
+h2{font-size:clamp(24px,4vw,30px);line-height:1.25;margin:48px 0 12px}
+section>h2:first-of-type{margin-top:72px}
+p{margin:0 0 14px}
+.lead{font-size:clamp(19px,2.6vw,22px);color:var(--mute);max-width:36em}
+.lead b{color:var(--ink);font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;font:700 18px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;text-decoration:none;background:var(--vb);color:#fff;padding:16px 28px;border-radius:14px;border:0;border-bottom:3px solid var(--vb2);cursor:pointer;min-height:56px}
+.btn:hover{background:var(--vb2)}
+.cta{margin:26px 0 8px}
+.num{font:600 16px system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--mute);margin-top:12px}
+.num a{color:var(--ink);display:inline-block;padding:4px 0}
+.note{font:15px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ok);min-height:1.4em;margin-top:8px}
+figure{margin:28px 0 0}
+figure img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:var(--paper)}
+figcaption{font-size:16px;color:var(--mute);margin-top:10px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0 20px}
+.pair>div{min-width:0}
+.pair img{display:block;width:100%;max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
+.pair span{display:block;font:600 14px system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--mute);margin-top:6px}
+.list{list-style:none;padding:0;margin:0}
+.list li{position:relative;padding:10px 0 10px 30px;border-bottom:1px solid var(--line);text-wrap:pretty}
+.list li:last-child{border-bottom:0}
+.list li::before{content:"";position:absolute;left:0;top:17px;width:18px;height:18px;background:no-repeat center/18px 18px}
+.list .y::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M3 9.5l4 4L15 4.5' fill='none' stroke='%233f6b3a' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.list .n::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M4.5 4.5l9 9M13.5 4.5l-9 9' fill='none' stroke='%239a3b2f' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E")}
+.prices{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:8px 0 14px}
+.price{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px}
+.price b{display:block;font:700 26px/1.1 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--acc);margin-bottom:6px;white-space:nowrap}
+.price span{display:block;font-size:17px;line-height:1.35}
+.price small{display:block;font-size:15px;color:var(--mute);margin-top:4px}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+.steps li{counter-increment:s;position:relative;padding:4px 0 18px 54px}
+.steps li{padding-bottom:12px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;border:1.5px solid var(--acc);color:var(--acc);font:700 17px/33px system-ui,sans-serif;text-align:center}
+.box{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:14px 0}
+.box ul{margin:8px 0 12px;padding-left:22px}
+.box li{margin-bottom:6px}
+.muted{color:var(--mute);font-size:17px}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+summary{cursor:pointer;font-weight:700;list-style:none;position:relative;padding-right:30px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:-2px;font:400 26px system-ui,sans-serif;color:var(--acc)}
+details[open] summary::after{content:"−"}
+details p{margin:10px 0 0}
+.end{text-align:center;margin:64px 0 0;padding:32px 20px;background:var(--paper);border:1px solid var(--line);border-radius:18px}
+.end h2{margin:0 0 8px}
+footer{max-width:760px;margin:0 auto;padding:8px 20px 28px;font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--mute);text-align:center}
+.bar{position:fixed;left:0;right:0;bottom:0;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(246,240,230,.96);border-top:1px solid var(--line);display:none;z-index:5}
+.bar .btn{width:100%;padding:14px 18px;min-height:52px;font-size:17px;box-shadow:none}
 [data-l]{display:none}[data-l].on{display:block}
-li[data-l].on{display:list-item}
+.bar [data-l]{display:none}.bar [data-l].on{display:flex}
+[hidden]{display:none!important}
+@media (max-width:640px){
+ .btn.big{width:100%}
+ .bar{display:block}
+ body{font-size:17px}
+ .pair{grid-template-columns:1fr}
+ .prices{grid-template-columns:1fr;gap:0;margin-bottom:10px}
+ .price{display:grid;grid-template-columns:1fr auto;column-gap:12px;align-items:baseline;border:0;border-bottom:1px solid var(--line);border-radius:0;background:none;padding:14px 0}
+ .price b{grid-column:2;grid-row:1;font-size:22px;margin:0}
+ .price span{grid-column:1;grid-row:1;font-weight:700}
+ .price small{grid-column:1/-1;margin-top:2px}
+}
+@media (min-width:641px){body{padding-bottom:0}}
 </style>
 </head>
 <body>
 <main>
-<div class="lang" role="group" aria-label="Language">
-<button data-set="ru" aria-pressed="true">RU</button>
-<button data-set="sr" aria-pressed="false">SR</button>
-<button data-set="en" aria-pressed="false">EN</button>
+<div class="top">
+<div class="brand">Nikita · Stare fotografije</div>
+<div class="lang" role="group" aria-label="Jezik / Язык">
+<button data-set="sr" aria-pressed="true">SR</button>
+<button data-set="ru" aria-pressed="false">RU</button>
+</div>
 </div>
 
-<!-- ========== RU ========== -->
-<section data-l="ru" class="on">
-<h1>Старая фотография. Тот же человек. Платите, только если узнали.</h1>
-<p class="lead">Пришлите снимок. Я пришлю бесплатный предпросмотр с водяным знаком. Если на нём вы узнаёте человека, называю цену и делаем окончательный файл. Не узнали, не платите.</p>
-<div class="cta"><a class="tg" href="#">Написать в Telegram</a><a class="mail alt" href="#">Написать на почту</a></div>
-
-<h2>Как это работает</h2>
-<ol>
-<li>Вы фотографируете снимок на телефон (подсказка ниже) и присылаете мне.</li>
-<li>Я смотрю снимок и сообщаю, что реально сохранить, а что нет.</li>
-<li>Вы получаете бесплатный предпросмотр с водяным знаком.</li>
-<li>Если узнали человека, я называю цену. Вы платите, я присылаю чистый файл.</li>
-</ol>
-
-<h2>Главное: лицо</h2>
-<p>На восстановленном снимке должен быть тот же человек, а не красивая версия. Поэтому лицо я сверяю с исходником, а вы видите результат до оплаты. Если от лица почти ничего не осталось, я скажу об этом честно, а не нарисую чужое.</p>
-
-<h2>Как сфотографировать старый снимок</h2>
-<ul>
-<li>Дневной свет у окна, без вспышки.</li>
-<li>Телефон параллельно снимку, весь снимок в кадре вместе с краями.</li>
-<li>Ничего исправлять заранее не надо: не заклеивайте разрывы скотчем, не ламинируйте.</li>
-</ul>
-
-<h2>Вопросы</h2>
-<details><summary>Как быстро вы ответите?</summary><p>Обычно в течение 2-3 часов.</p></details>
-<details><summary>Сколько стоит?</summary><p>Цена зависит от повреждений и от того, нужна ли раскраска. Я называю её после предпросмотра, до того как вы что-то решаете.</p></details>
-<details><summary>Как оплатить?</summary><p>Из-за границы: PayPal или Payoneer. На русскую или сербскую карту: реквизиты пришлю лично в переписке.</p></details>
-<details><summary>Это нейросеть?</summary><p>Это не «одна кнопка». У меня набор нейросетевых инструментов, собственные скрипты и большой опыт работы в Photoshop. Каждое лицо я сверяю с исходным снимком вручную, а решение о результате принимаете вы.</p></details>
-<details><summary>Что с моим снимком потом?</summary><p>Я не публикую чужие снимки без вашего письменного согласия.</p></details>
-<details><summary>Можно ли раскрасить чёрно-белое фото?</summary><p>Да, это отдельная опция. Скажите заранее, и я добавлю цвет.</p></details>
-<div class="cta"><a class="tg" href="#">Прислать снимок в Telegram</a></div>
-</section>
-
 <!-- ========== SR ========== -->
-<section data-l="sr">
-<h1>Stara fotografija. Ista osoba. Plaćate samo ako prepoznate.</h1>
-<p class="lead">Pošaljite sliku. Dobijate besplatan pregled sa vodenim žigom. Ako na njemu prepoznate osobu, kažem cenu i radimo konačni fajl. Ako ne prepoznate, ne plaćate.</p>
-<div class="cta"><a class="viber" href="#">Pišite na Viber</a><a class="mail alt" href="#">Pišite na mejl</a></div>
+<section data-l="sr" class="on">
+<h1>Obnavljam stare porodične fotografije</h1>
+<p class="lead">Pukotine, pregibi, fleke i izbledela boja. Prvo dobijate <b>besplatan pregled sa vodenim žigom u roku od 24 sata</b>. Plaćate samo ako prepoznate osobu.</p>
+<div class="cta"><a class="btn big viber" href="#">Pošaljite sliku na Viber</a>
+<div class="num">Viber: <a class="vnum" href="#">+381 63 8224429</a> · dovoljan je snimak telefonom</div><div class="note" aria-live="polite"></div></div>
 
-<h2>Kako to ide</h2>
-<ol>
-<li>Uslikate fotografiju telefonom (saveti ispod) i pošaljete mi.</li>
-<li>Pogledam sliku i kažem šta je realno sačuvati, a šta nije.</li>
-<li>Dobijate besplatan pregled sa vodenim žigom.</li>
-<li>Ako prepoznate osobu, kažem cenu. Vi platite, ja pošaljem čist fajl.</li>
+<figure data-img="img/p10-diptih.jpg" hidden><img alt="Ista fotografija pre i posle obnove" loading="lazy"><figcaption>Pre i posle: ista osoba, isto lice, samo bez oštećenja.</figcaption></figure>
+
+<h2>Šta radim, a šta ne</h2>
+<ul class="list">
+<li class="y">pukotine, pregibi, fleke, ogrebotine</li>
+<li class="y">izbledela i požutela slika</li>
+<li class="y">boja na crno-beloj slici, u ceni</li>
+<li class="n">lice koje je potpuno nestalo: ne izmišljam ga</li>
+<li class="n">ne „ulepšavam“ osobu: bore i ožiljci ostaju</li>
+</ul>
+
+<h2>Cene</h2>
+<div class="prices">
+<div class="price"><b>599 din</b><span>Fajl</span><small>za telefon i za štampu kasnije</small></div>
+<div class="price"><b>999 din</b><span>Slika 13×18</span><small>odštampana</small></div>
+<div class="price"><b>1.499 din</b><span>Slika 13×18 u ramu</span><small>slika 999 din + ram 500 din</small></div>
+<div class="price"><b>2.999 din</b><span>Portret A4 u ramu</span><small>za zid ili za poklon</small></div>
+</div>
+<p class="muted">Boja na crno-beloj slici je u ceni. Štampu šaljem širom Srbije, dostavu dogovaramo u Viberu.</p>
+
+<h2>Kako ide</h2>
+<ol class="steps">
+<li>Slikate fotografiju telefonom i pošaljete je na Viber.</li>
+<li>Pogledam je i kažem iskreno koliko je fotografiju moguće obnoviti: potpuno, delimično ili nikako.</li>
+<li>U roku od 24 sata dobijate besplatan pregled sa vodenim žigom.</li>
+<li>Ako prepoznate osobu, birate fajl ili štampu i plaćate. Ako ne, ne dugujete ništa.</li>
 </ol>
 
-<h2>Najvažnije: lice</h2>
-<p>Na obnovljenoj slici mora da bude ista osoba, a ne lepša verzija. Zato lice proveravam prema originalu, a vi vidite rezultat pre plaćanja. Ako je od lica ostalo skoro ništa, reći ću vam iskreno, umesto da nacrtam nekog drugog.</p>
+<h2>Kako da uslikate staru sliku</h2>
+<p>Skener vam ne treba.</p>
+<ol class="steps">
+<li>Izvadite sliku iz rama ili albuma: staklo pravi odsjaj.</li>
+<li>Stavite je na sto pored prozora, danju, bez blica.</li>
+<li>Slikajte telefonom odozgo, ravno, da slika popuni ekran.</li>
+</ol>
+<div class="pair" data-pair hidden><div><img data-src="img/p5-lose.jpg" alt="Loše: sa blicem, kroz staklo, iskosa" loading="lazy"><span>Loše: blic, staklo, iskosa</span></div><div><img data-src="img/p6-dobro.jpg" alt="Dobro: bez rama, pored prozora, odozgo" loading="lazy"><span>Dobro: bez rama, pored prozora, odozgo</span></div></div>
+<p class="muted">Ako je slika zalepljena za staklo ili za album, ne odvajajte je na silu. Slikajte je takvu, pa ćemo videti.</p>
 
-<h2>Kako da uslikate staru fotografiju</h2>
+<h2>Za dijasporu</h2>
+<div class="box">
+<p>Vi ste u Nemačkoj, Austriji ili Švajcarskoj, a stari albumi su kod roditelja u Srbiji?</p>
+<p>Ne morate ništa da nosite preko granice. Dovoljno je da neko od vaših uslika fotografiju telefonom i pošalje je meni ili vama na Viber. Posle pregleda birate:</p>
 <ul>
-<li>Dnevno svetlo pored prozora, bez blica.</li>
-<li>Telefon paralelno sa slikom, cela slika u kadru zajedno sa ivicama.</li>
-<li>Ništa ne popravljajte unapred: ne lepite selotejp preko pocepanog mesta, ne laminirajte.</li>
+<li>fajl za vas;</li>
+<li>odštampanu sliku u ramu na kućnu adresu u Srbiji;</li>
+<li>štampu za vas, u inostranstvu.</li>
 </ul>
+<p class="muted">Plaćate uplatom iz inostranstva, samo ako na pregledu prepoznate osobu. Cenu kažem posle pregleda, zavisno od formata i dostave.</p>
+</div>
 
 <h2>Pitanja</h2>
-<details><summary>Koliko brzo odgovarate?</summary><p>Obično u roku od 2-3 sata.</p></details>
-<details><summary>Koliko košta?</summary><p>Cena zavisi od oštećenja i od toga da li želite bojenje. Kažem vam je posle pregleda, pre nego što bilo šta odlučite.</p></details>
-<details><summary>Kako se plaća?</summary><p>Iz inostranstva: PayPal ili Payoneer. Na dinarsku ili rusku karticu: podatke šaljem lično u prepisci.</p></details>
-<details><summary>Da li to radi veštačka inteligencija?</summary><p>Nije to „jedno dugme“. Imam set alata sa neuronskim mrežama, sopstvene skripte i veliko iskustvo u Photoshopu. Svako lice ručno proveravam prema originalu, a odluku o rezultatu donosite vi.</p></details>
+<details><summary>Šta ako je slika previše uništena?</summary><p>Pošaljite je pre nego što odustanete. Iskreno ću vam reći da li je fotografiju moguće obnoviti potpuno, delimično ili nikako. Ne bacajte i ne secite oštećenu sliku, čak i kad mislite da je kasno.</p></details>
+<details><summary>Kako se plaća?</summary><p>Tek kad na pregledu prepoznate osobu. Podatke za uplatu šaljem u Viberu.</p></details>
+<details><summary>Da li to radi veštačka inteligencija?</summary><p>Nije to „jedno dugme“. Imam skup alata sa neuronskim mrežama, sopstvene skripte i veliko iskustvo u Photoshopu. Svako lice ručno upoređujem sa originalom, a odluku o rezultatu donosite vi.</p></details>
 <details><summary>Šta se posle dešava sa mojom slikom?</summary><p>Tuđe slike ne objavljujem bez vaše pismene saglasnosti.</p></details>
-<details><summary>Može li crno-bela slika da se oboji?</summary><p>Može, to je posebna opcija. Recite unapred i dodaću boju.</p></details>
-<div class="cta"><a class="viber" href="#">Pošaljite sliku na Viber</a></div>
+<details><summary>Treba li mi skener?</summary><p>Ne. Dovoljan je snimak telefonom pored prozora, danju, bez blica.</p></details>
+
+<div class="end">
+<h2>Imate sliku koja čeka u fioci?</h2>
+<p class="muted">Pošaljite je telefonom. Pregled je besplatan.</p>
+<a class="btn viber" href="#">Pošaljite sliku na Viber</a><div class="note" aria-live="polite"></div>
+</div>
 </section>
 
-<!-- ========== EN ========== -->
-<section data-l="en">
-<h1>An old photo. The same person. Pay only if you recognize them.</h1>
-<p class="lead">Send me the photo. You get a free watermarked preview. If you recognize the person, I tell you the price and we make the final file. If you do not, you pay nothing.</p>
-<div class="cta"><a class="mail" href="#">Email me the photo</a><a class="tg alt" href="#">Message on Telegram</a></div>
+<!-- ========== RU ========== -->
+<section data-l="ru">
+<h1>Восстанавливаю старые семейные фотографии</h1>
+<p class="lead">Трещины, заломы, пятна и выцветший цвет. Сначала <b>бесплатный предпросмотр с водяным знаком, в течение суток</b>. Платите, только если узнали человека.</p>
+<div class="cta"><a class="btn big viber" href="#">Прислать снимок в Viber</a>
+<div class="num">Viber: <a class="vnum" href="#">+381 63 8224429</a> · хватит снимка телефоном</div><div class="note" aria-live="polite"></div></div>
 
-<h2>How it works</h2>
-<ol>
-<li>You photograph the picture with your phone (tips below) and send it to me.</li>
-<li>I look at it and tell you what can realistically be saved and what cannot.</li>
-<li>You get a free watermarked preview.</li>
-<li>If you recognize the person, I name the price. You pay, I send the clean file.</li>
-</ol>
+<figure data-img="img/p10-diptih.jpg" hidden><img alt="Один снимок до и после восстановления" loading="lazy"><figcaption>До и после: тот же человек и то же лицо, только без повреждений.</figcaption></figure>
 
-<h2>What matters most: the face</h2>
-<p>A restored photo must show the same person, not a prettier version. So I check the face against the original, and you see the result before you pay. If almost nothing of the face is left, I will say so honestly instead of drawing a stranger.</p>
-
-<h2>How to photograph an old picture</h2>
-<ul>
-<li>Daylight by a window, no flash.</li>
-<li>Phone held parallel to the picture, the whole photo in frame with its edges.</li>
-<li>Do not fix anything beforehand: no tape on tears, no lamination.</li>
+<h2>Что делаю, а что нет</h2>
+<ul class="list">
+<li class="y">трещины, заломы, пятна, царапины</li>
+<li class="y">выцветший и пожелтевший снимок</li>
+<li class="y">цвет на чёрно-белом снимке, входит в цену</li>
+<li class="n">лицо, которого почти не осталось: не придумываю его</li>
+<li class="n">не «улучшаю» человека: морщины и шрамы остаются</li>
 </ul>
 
-<h2>Questions</h2>
-<details><summary>How fast do you reply?</summary><p>Usually within 2-3 hours.</p></details>
-<details><summary>How much does it cost?</summary><p>The price depends on the damage and on whether you want colorization. I tell you after the preview, before you decide anything.</p></details>
-<details><summary>How do I pay?</summary><p>PayPal or Payoneer. I send the details personally in our conversation.</p></details>
-<details><summary>Is this done by AI?</summary><p>It is not a single button press. I use a set of neural-network tools, my own scripts and long Photoshop experience. I check every face by hand against the original, and the final judgment is yours.</p></details>
-<details><summary>What happens to my photo afterwards?</summary><p>I do not publish anyone's photo without your written consent.</p></details>
-<details><summary>Can a black and white photo be colorized?</summary><p>Yes, as a separate option. Tell me in advance and I will add color.</p></details>
-<div class="cta"><a class="mail" href="#">Email me the photo</a></div>
+<h2>Цены</h2>
+<div class="prices">
+<div class="price"><b>599 дин</b><span>Файл</span><small>для телефона и для печати позже</small></div>
+<div class="price"><b>999 дин</b><span>Снимок 13×18</span><small>напечатанный</small></div>
+<div class="price"><b>1.499 дин</b><span>13×18 в рамке</span><small>снимок 999 дин + рамка 500 дин</small></div>
+<div class="price"><b>2.999 дин</b><span>Портрет A4 в рамке</span><small>на стену или в подарок</small></div>
+</div>
+<p class="muted">Цвет на чёрно-белом снимке входит в цену. Печать отправляю по всей Сербии, доставку обсудим в Viber.</p>
+
+<h2>Как это работает</h2>
+<ol class="steps">
+<li>Фотографируете снимок телефоном и присылаете в Viber.</li>
+<li>Смотрю и честно говорю, насколько его можно восстановить: полностью, частично или никак.</li>
+<li>В течение суток присылаю бесплатный предпросмотр с водяным знаком.</li>
+<li>Узнали человека: выбираете файл или печать и платите. Не узнали: ничего не должны.</li>
+</ol>
+
+<h2>Как сфотографировать старый снимок</h2>
+<p>Сканер не нужен.</p>
+<ol class="steps">
+<li>Выньте снимок из рамки или альбома: стекло даёт блик.</li>
+<li>Положите его на стол у окна, днём, без вспышки.</li>
+<li>Снимайте сверху и ровно, чтобы снимок заполнил экран.</li>
+</ol>
+<div class="pair" data-pair hidden><div><img data-src="img/p5-lose.jpg" alt="Плохо: со вспышкой, через стекло, под углом" loading="lazy"><span>Плохо: вспышка, стекло, угол</span></div><div><img data-src="img/p6-dobro.jpg" alt="Хорошо: без рамки, у окна, сверху" loading="lazy"><span>Хорошо: без рамки, у окна, сверху</span></div></div>
+<p class="muted">Если снимок прилип к стеклу или к альбому, не отрывайте его. Сфотографируйте как есть.</p>
+
+<h2>Фото остались у родных дома?</h2>
+<div class="box">
+<p>Вы живёте в Сербии, а семейные снимки у мамы или бабушки?</p>
+<p>Везти ничего не нужно. Пусть кто-то из родных сфотографирует снимок телефоном у окна, без вспышки, и пришлёт вам, а вы перешлёте мне в Viber.</p>
+<p class="muted">Файл пришлю вам, а напечатать 13×18 или A4 в рамке можно здесь, в Сербии.</p>
+</div>
+
+<h2>Вопросы</h2>
+<details><summary>А если снимок слишком испорчен?</summary><p>Пришлите его, прежде чем решать. Честно скажу, можно ли его восстановить полностью, частично или никак. Не выбрасывайте и не режьте повреждённый снимок, даже если кажется, что поздно.</p></details>
+<details><summary>Как оплатить?</summary><p>Только после предпросмотра, когда вы узнали человека. Реквизиты пришлю в Viber.</p></details>
+<details><summary>Это нейросеть?</summary><p>Это не «одна кнопка». У меня набор нейросетевых инструментов, собственные скрипты и большой опыт работы в Photoshop. Каждое лицо я сверяю с исходным снимком вручную, а решение о результате принимаете вы.</p></details>
+<details><summary>Что с моим снимком потом?</summary><p>Я не публикую чужие снимки без вашего письменного согласия.</p></details>
+<details><summary>Нужен ли сканер?</summary><p>Нет. Хватит снимка телефоном у окна, днём, без вспышки.</p></details>
+
+<div class="end">
+<h2>Есть снимок, который лежит в ящике?</h2>
+<p class="muted">Сфотографируйте его телефоном. Предпросмотр бесплатный.</p>
+<a class="btn viber" href="#">Прислать снимок в Viber</a><div class="note" aria-live="polite"></div>
+</div>
 </section>
 </main>
 
+<footer><span data-l="sr" class="on">Nikita · Bač, Srbija · Viber +381 63 8224429</span><span data-l="ru">Никита · Бач, Сербия · Viber +381 63 8224429</span></footer>
+
+<div class="bar"><a class="btn viber on" href="#" data-l="sr">Pošaljite sliku na Viber</a><a class="btn viber" href="#" data-l="ru">Прислать снимок в Viber</a></div>
+
 <script>
-/* Контакты: заполнить до публикации (см. funnel/ВОРОНКА.md, раздел «Нужно от Никиты»). */
-var CONTACT={telegram:"tanyoushin",viber:"+381638224429",email:"allforluma@gmail.com",whatsapp:""};
+var VIBER="+381638224429";
 var MOBILE=/Android|iPhone|iPad|iPod|Mobi/i.test(navigator.userAgent);
-function hrefFor(cls){
- if(cls=="tg"&&CONTACT.telegram)return "https://t.me/"+CONTACT.telegram;
- if(cls=="viber"&&CONTACT.viber)return "viber://chat?number="+encodeURIComponent(CONTACT.viber);
- if(cls=="mail"&&CONTACT.email)return "mailto:"+CONTACT.email+"?subject=Photo";
- if(cls=="wa"&&CONTACT.whatsapp)return "https://wa.me/"+CONTACT.whatsapp;
- return null;
+document.querySelectorAll("a.viber, a.vnum").forEach(function(a){
+ if(MOBILE){a.href="viber://chat?number="+encodeURIComponent(VIBER);return}
+ a.href="#";
+ a.onclick=function(e){
+  e.preventDefault();
+  try{navigator.clipboard.writeText(VIBER)}catch(x){}
+  var wrap=a.closest(".cta,.end"),box=wrap&&wrap.querySelector(".note");
+  if(!box)return;
+  box.textContent=document.documentElement.lang=="ru"
+   ?"Номер скопирован: +381 63 8224429. Откройте Viber и вставьте его в поиск."
+   :"Broj je kopiran: +381 63 8224429. Otvorite Viber i nalepite ga u pretragu.";
+ };
+});
+/* нижняя кнопка на телефоне прячется, пока видна кнопка первого экрана или последнего блока */
+if("IntersectionObserver" in window){
+ var bar=document.querySelector(".bar"),seen=new Set();
+ var io=new IntersectionObserver(function(es){
+  es.forEach(function(e){e.isIntersecting?seen.add(e.target):seen.delete(e.target)});
+  bar.style.visibility=seen.size?"hidden":"visible";
+ });
+ document.querySelectorAll(".cta .btn,.end .btn").forEach(function(b){io.observe(b)});
 }
-document.querySelectorAll(".cta a").forEach(function(a){
- var c=["tg","viber","mail","wa"].filter(function(x){return a.classList.contains(x)})[0];
- var h=hrefFor(c);
- if(h){a.href=h}else{a.style.display="none"}
- if(!h||MOBILE)return;
- if(c=="mail"){
-  a.href="https://mail.google.com/mail/?view=cm&to="+encodeURIComponent(CONTACT.email)+"&su=Photo";
-  a.target="_blank";a.rel="noopener";
- }
- if(c=="viber"){
-  a.href="#";
-  a.onclick=function(e){
-   e.preventDefault();
-   var n=CONTACT.viber,box=a.parentNode.querySelector(".note");
-   if(!box){box=document.createElement("p");box.className="note";a.parentNode.appendChild(box)}
-   box.textContent="Broj je kopiran: "+n+". Otvorite Viber i nalepite ga u pretragu.";
-   try{navigator.clipboard.writeText(n)}catch(x){}
-  };
- }
+/* картинки до/после показываются, только когда файл уже лежит в img/ */
+document.querySelectorAll("figure[data-img]").forEach(function(f){
+ var img=f.querySelector("img"),t=new Image();
+ t.onload=function(){img.src=t.src;f.hidden=false};t.src=f.dataset.img;
+});
+document.querySelectorAll("[data-pair]").forEach(function(p){
+ var imgs=p.querySelectorAll("img[data-src]"),left=imgs.length;
+ imgs.forEach(function(img){var t=new Image();t.onload=function(){img.src=t.src;if(--left==0)p.hidden=false};t.src=img.dataset.src});
 });
 function setLang(l){
  document.documentElement.lang=l;
@@ -182,8 +281,8 @@ function setLang(l){
 document.querySelectorAll("[data-set]").forEach(function(b){b.onclick=function(){setLang(b.dataset.set)}});
 var q=(location.hash||"").replace("#","");
 var saved=null;try{saved=localStorage.getItem("l")}catch(e){}
-var nav=(navigator.language||"en").slice(0,2);
-setLang(["ru","sr","en"].indexOf(q)>=0?q:saved||(["ru","sr"].indexOf(nav)>=0?nav:(nav=="hr"||nav=="bs"?"sr":"en")));
+var nav=(navigator.language||"sr").slice(0,2);
+setLang(["sr","ru"].indexOf(q)>=0?q:(["sr","ru"].indexOf(saved)>=0?saved:(["ru","uk","be","kk"].indexOf(nav)>=0?"ru":"sr")));
 </script>
 <script data-goatcounter="https://fotobis.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
